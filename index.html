@@ -1,372 +1,615 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tracking and Monitoring System</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tracking and Monitoring System — Academic Research Portal</title>
+  <meta name="description" content="Research tracking and milestone monitoring platform for Senior High School students at AMA Santa Cruz.">
 
-    <!-- font awesome cdn link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
 
-    <!-- Custome CSS File Link -->
-    <link rel="stylesheet" href="style.css">
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <!-- ======================================================================
+       SIDEBAR
+       ====================================================================== -->
+  <aside id="sidebar" aria-label="Main Navigation">
+    <div class="sidebar-brand">
+      <div class="brand-icon-wrapper">
+        <i data-lucide="layers" style="width: 22px; height: 22px;"></i>
+      </div>
+      <div class="brand-info">
+        <span class="brand-title">TMS Portal</span>
+        <span class="brand-subtitle">Research Monitor</span>
+      </div>
+    </div>
 
-	<!-- SIDEBAR Starts here -->
-	<section id="sidebar">
-		<a href="#" class="brand">
-			<i class='bx bxs-smile'></i>
-			<span class="text">TMS</span>
-		</a>
-		<ul class="side-menu top">
-			<li class="active">
-				<a href="#dashboard">
-					<i class='bx bxs-dashboard' ></i>
-					<span class="text">Dashboard</span>
-				</a>
-			</li>
-			<li>
-				<a href="#works">
-					<i class='bx bxs-copy'></i>
-					<span class="text">My Works</span>
-				</a>
-			</li>
-			<li>
-				<a href="#task">
-					<i class='bx bxs-calendar-alt'></i>
-					<span class="text">Assigned Tasks</span>
-				</a>
-			</li>
-			<li>
-				<a href="#message">
-					<i class='bx bxs-message-square-dots'></i>
-					<span class="text">Message</span>
-				</a>
-			</li>
-			<li>
-				<a href="#teams">
-					<i class='bx bxs-group' ></i>
-					<span class="text">Team</span>
-				</a>
-			</li>
-		</ul>
-		<ul class="side-menu">
-			
-	</section>
-	<!-- SIDEBAR ends here -->
+    <nav class="sidebar-nav">
+      <span class="nav-section-title">Navigation</span>
+      <a href="#dashboard" class="sidebar-nav-item active" data-view="dashboard">
+        <i data-lucide="layout-dashboard" class="icon"></i>
+        <span class="text">Dashboard</span>
+      </a>
+      <a href="#works" class="sidebar-nav-item" data-view="works">
+        <i data-lucide="book-open" class="icon"></i>
+        <span class="text">Research Chapters</span>
+        <span class="badge">5</span>
+      </a>
+      <a href="#task" class="sidebar-nav-item" data-view="task">
+        <i data-lucide="check-square" class="icon"></i>
+        <span class="text">Assigned Tasks</span>
+      </a>
+      <a href="#teams" class="sidebar-nav-item" data-view="teams">
+        <i data-lucide="users" class="icon"></i>
+        <span class="text">Research Team</span>
+      </a>
+      <a href="#message" class="sidebar-nav-item" data-view="message">
+        <i data-lucide="message-square" class="icon"></i>
+        <span class="text">Activity Notes</span>
+      </a>
+    </nav>
 
-    <!-- CONTENT -->
-	<section id="content">
-		<!-- NAVBAR -->
-		<nav>
-			<i class='bx bx-menu' ></i>
-			<a href="#" class="nav-link">Categories</a>
-			<form action="#">
-				<div class="form-input">
-					<input type="search" placeholder="Search...">
-					<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
-				</div>
-			</form>
-			<input type="checkbox" id="switch-mode" hidden>
-			<label for="switch-mode" class="switch-mode"></label>
-			<a href="#" class="notification">
-				<i class='bx bxs-bell' ></i>
-				<span class="num">8</span>
-			</a>
-			<a href="#" class="profile">
-				<img src="img/pic1.jpg">
-			</a>
-		</nav>
-		<!-- NAVBAR -->
+    <div class="sidebar-footer">
+      <a href="researchfinal.pdf" target="_blank" class="sidebar-nav-item">
+        <i data-lucide="file-down" class="icon"></i>
+        <span class="text">Full Manuscript</span>
+      </a>
+      <div class="sidebar-nav-item" style="cursor: default;">
+        <i data-lucide="school" class="icon"></i>
+        <span class="text" style="font-size: 0.75rem; color: #64748b;">AMA Santa Cruz</span>
+      </div>
+    </div>
+  </aside>
 
-		<!-- MAIN -->
-		<main>
-			<div class="head-title" id="dashboard">
-				<div class="left">
-					<h1>Tracking and Monitoring System</h1>
-					<p>Online Research Activity</p>
-					<ul class="breadcrumb">
-						<li>
-							<a href="#">Dashboard</a>
-						</li>
-						<li><i class='bx bx-chevron-right' ></i></li>
-						<li>
-							<a class="active" href="#">Home</a>
-						</li>
-					</ul>
-				</div>
-				<a href="researchfinal.pdf" target="_blank" class="btn-download">
-					<i class='bx bxs-cloud-download' ></i>
-					<span class="text" >Download PDF</span>
-				</a>
-			</div>
+  <!-- ======================================================================
+       MAIN CONTENT CONTAINER
+       ====================================================================== -->
+  <div id="content">
+    
+    <!-- Top Navbar -->
+    <header class="top-navbar">
+      <div class="navbar-left">
+        <button id="sidebar-toggle-btn" class="toggle-sidebar-btn" title="Toggle Navigation" aria-label="Toggle navigation">
+          <i data-lucide="menu" style="width: 20px; height: 20px;"></i>
+        </button>
+        <div class="search-box">
+          <i data-lucide="search" style="width: 16px; height: 16px; color: var(--text-muted);"></i>
+          <input type="search" id="global-search-input" placeholder="Search chapters, activities, tasks..." aria-label="Search">
+        </div>
+      </div>
 
-			<ul class="box-info">
-				<li>
-					<a href="chap1.html"><i class='bx bxs-folder'></i></a>
-					<span class="text">
-						<h2>Chapter 1</h2>
-						<p>Introduction & It's Problem</p>
-					</span>
-				</li>
-				<li>
-					<a href="chap2.html"><i class='bx bxs-folder'></i></a>
-					<span class="text">
-						<h2>Chapter 2</h2>
-						<p>Literature and Studies</p>
-					</span>
-				</li>
-				<li>
-					<a href="chap3.html"><i class='bx bxs-folder'></i></a>
-					<span class="text">
-						<h2>Chapter 3</h2>
-						<p>Research Methodology</p>
-					</span>
-				</li>
-				<li>
-					<a href="chap4.html"><i class='bx bxs-folder'></i></a>
-					<span class="text">
-						<h2>Chapter 4</h2>
-						<p>Analization of the Study</p>
-					</span>
-				</li>
-				<li>
-					<a href="chap5.html"><i class='bx bxs-folder'></i></a>
-					<span class="text">
-						<h2>Chapter 5</h2>
-						<p>Summary & Conclusions</p>
-					</span>
-				</li>
-			</ul>
+      <div class="navbar-right">
+        <!-- Dark Mode Toggle Switch -->
+        <div style="display: flex; align-items: center; gap: 8px; margin-right: 8px;">
+          <i data-lucide="sun" style="width: 16px; height: 16px; color: var(--text-muted);"></i>
+          <label style="position: relative; display: inline-block; width: 40px; height: 22px; cursor: pointer;">
+            <input type="checkbox" id="switch-mode" style="opacity: 0; width: 0; height: 0;">
+            <span style="position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: var(--border-color); transition: .2s; border-radius: 22px;"></span>
+          </label>
+          <i data-lucide="moon" style="width: 16px; height: 16px; color: var(--text-muted);"></i>
+        </div>
 
+        <button class="icon-btn" title="Notifications" aria-label="Notifications">
+          <i data-lucide="bell" style="width: 18px; height: 18px;"></i>
+          <span class="notification-dot"></span>
+        </button>
 
-			<div class="table-data">
-				<div class="order">
-					<div class="head">
-						<h3>Recent Activity</h3>
-						<i class='bx bx-search' ></i>
-						<i class='bx bx-filter' ></i>
-					</div>
-					<table>
-						<thead>
-							<tr>
-								<th>User</th>
-								<th>Date </th>
-								<th>Status</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>
-									<img src="img/pic1.jpg">
-									<p>lady Liberty Caragay</p>
-								</td>
-								<td>02-10-2023</td>
-								<td><span class="status completed">Completed</span></td>
-							</tr>
-							<tr>
-								<td>
-									<img src="img/jenlyn.jpg">
-									<p>Jenlyn Leron</p>
-								</td>
-								<td>04-16-2023</td>
-								<td><span class="status pending">Pending</span></td>
-							</tr>
-							<tr>
-								<td>
-									<img src="img/jenlyn.jpg">
-									<p>Jenlyn Leron</p>
-								</td>
-								<td>04-10-2023</td>
-								<td><span class="status process">Process</span></td>
-							</tr>
-							<tr>
-								<td>
-									<img src="img/pic1.jpg">
-									<p>Lady Liberty Caragay</p>
-								</td>
-								<td>04-18-2021</td>
-								<td><span class="status pending">Pending</span></td>
-							</tr>
-							<tr>
-								<td>
-									<img src="img/jenlyn.jpg">
-									<p>Jenlyn Leron</p>
-								</td>
-								<td>03-26-2023</td>
-								<td><span class="status completed">Completed</span></td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-				<div class="todo">
-					<div class="head">
-						<h3>Todos</h3>
-						<i class='bx bx-plus' ></i>
-						<i class='bx bx-filter' ></i>
-					</div>
-					<ul class="todo-list">
-						<li class="completed">
-							<p>Statistical Treatment</p>
-							<i class='bx bx-dots-vertical-rounded' ></i>
-						</li>
-						<li class="not-completed">
-							<p>Summary</p>
-							<i class='bx bx-dots-vertical-rounded' ></i>
-						</li>
-						<li class="inprogress">
-							<p>Findings</p>
-							<i class='bx bx-dots-vertical-rounded' ></i>
-						</li>
-						<li class="not-completed">
-							<p>Table Of Contents</p>
-							<i class='bx bx-dots-vertical-rounded' ></i>
-						</li>
-						<li class="not-completed">
-							<p>Appendix</p>
-							<i class='bx bx-dots-vertical-rounded' ></i>
-						</li>
-						<li class="not-completed">
-							<p>Conclusions</p>
-							<i class='bx bx-dots-vertical-rounded' ></i>
-						</li>
-						<li class="not-completed">
-							<p>Recommendations</p>
-							<i class='bx bx-dots-vertical-rounded' ></i>
-						</li>
-					</ul>
-				</div>
-			</div>
+        <div class="user-profile-badge">
+          <img src="img/pic1.jpg" alt="Lady Liberty Caragay" class="user-avatar" onerror="this.src='https://ui-avatars.com/api/?name=Lady+Liberty&background=2563eb&color=fff'">
+          <div class="user-meta">
+            <span class="user-name">Lady Liberty Caragay</span>
+            <span class="user-role">Lead Researcher</span>
+          </div>
+        </div>
+      </div>
+    </header>
 
-            <!-- Assigned task starts here -->
+    <!-- Main Views Area -->
+    <main class="main-body">
 
-            <div class="head-title2" id="task">
-                <div class="center">
-                    <h1>Assigned Task</h1>
-                </div>
+      <!-- ================================================================
+           VIEW: DASHBOARD
+           ================================================================ -->
+      <section id="view-dashboard" class="view-section active">
+        <!-- Banner Header -->
+        <div class="page-header">
+          <div class="header-title-group">
+            <h1>Tracking & Monitoring System</h1>
+            <p class="header-subtitle">Senior High School Research Activities • AMA Computer College Santa Cruz</p>
+          </div>
+          <div class="header-actions">
+            <a href="researchfinal.pdf" target="_blank" class="btn btn-secondary">
+              <i data-lucide="download" style="width: 16px; height: 16px;"></i>
+              Download Full PDF
+            </a>
+            <button class="btn btn-primary" onclick="window.openChapter('chap1')">
+              <i data-lucide="book-open" style="width: 16px; height: 16px;"></i>
+              Read Manuscript
+            </button>
+          </div>
+        </div>
 
-                <div class="table-data2">
-                    <div class="order2">
-                        <div class="head2">
-                            <h3>Current Status of your Task</h3>
-                        </div>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>User</th>
-                                    <th>Date</th>
-                                    <th>Status</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <img src="img/jenlyn.jpg">
-                                        <p>Jenlyn Leron</p>
-                                    </td>
-                                    <td>05-17-2023</td>
-                                    <td><span class="status pending">Pending</span></td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <img src="img/pic1.jpg">
-                                        <p>Lady Liberty Caragay</p>
-                                    </td>
-                                    <td>05-17-2023</td>
-                                    <td><span class="status completed">Completed</span></td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <img src="img/pic1.jpg">
-                                        <p>Lady Liberty Caragay</p>
-                                    </td>
-                                    <td>05-17-2023</td>
-                                    <td><span class="status process">Process</span></td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <img src="img/jenlyn.jpg">
-                                        <p>Jenlyn Leron	</p>
-                                    </td>
-                                    <td>05-17-2023</td>
-                                    <td><span class="status completed">Completed</span></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
+        <!-- Metric KPI Cards (Varied Visual Hierarchy) -->
+        <div class="stats-grid">
+          <div class="stat-card featured">
+            <div class="stat-top">
+              <span class="stat-label">Manuscript Status</span>
+              <div class="stat-icon" style="background-color: var(--success-light); color: var(--success);">
+                <i data-lucide="file-check-2" style="width: 20px; height: 20px;"></i>
+              </div>
+            </div>
+            <div class="stat-value">5 / 5</div>
+            <div class="stat-footer">
+              <span class="stat-badge success">100% Completed</span>
+              <span>All 5 chapters finalized</span>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-top">
+              <span class="stat-label">Study Sample</span>
+              <div class="stat-icon">
+                <i data-lucide="users" style="width: 20px; height: 20px;"></i>
+              </div>
+            </div>
+            <div class="stat-value">30</div>
+            <div class="stat-footer">
+              <span class="stat-badge primary">Grade 11 & 12</span>
+              <span>ICT Track Respondents</span>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-top">
+              <span class="stat-label">Overall Acceptance</span>
+              <div class="stat-icon">
+                <i data-lucide="trending-up" style="width: 20px; height: 20px;"></i>
+              </div>
+            </div>
+            <div class="stat-value">4.75 <span style="font-size: 1rem; color: var(--text-muted); font-weight: 500;">/ 5.0</span></div>
+            <div class="stat-footer">
+              <span class="stat-badge success">Outstanding</span>
+              <span>High usability & impact</span>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-top">
+              <span class="stat-label">System Effectiveness</span>
+              <div class="stat-icon">
+                <i data-lucide="award" style="width: 20px; height: 20px;"></i>
+              </div>
+            </div>
+            <div class="stat-value">93.3%</div>
+            <div class="stat-footer">
+              <span class="stat-badge success">28 of 30</span>
+              <span>Found system very effective</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chapters Overview Grid -->
+        <div class="section-heading-row">
+          <h2 class="section-title">Research Chapters Overview</h2>
+          <span style="font-size: 0.8125rem; color: var(--text-muted);">Click any chapter to inspect manuscript sections</span>
+        </div>
+
+        <div class="chapters-grid">
+          <div class="chapter-card" onclick="window.openChapter('chap1')">
+            <div class="chapter-header">
+              <span class="chapter-pill">Chapter 1</span>
+              <span class="chapter-status-dot" title="Finalized"></span>
+            </div>
+            <div class="chapter-name">Introduction & Background</div>
+            <p class="chapter-desc">Study rationale, problem statement, hypothesis, scope, and definition of terms.</p>
+            <div class="chapter-meta">
+              <span class="chapter-meta-tag"><i data-lucide="file-text" style="width: 12px; height: 12px;"></i> 2,450 words</span>
+              <span style="font-weight: 600; color: var(--primary);">View &rarr;</span>
+            </div>
+          </div>
+
+          <div class="chapter-card" onclick="window.openChapter('chap2')">
+            <div class="chapter-header">
+              <span class="chapter-pill">Chapter 2</span>
+              <span class="chapter-status-dot" title="Finalized"></span>
+            </div>
+            <div class="chapter-name">Review of Related Literature</div>
+            <p class="chapter-desc">Theoretical framework (Technology Acceptance Model), local and foreign studies.</p>
+            <div class="chapter-meta">
+              <span class="chapter-meta-tag"><i data-lucide="file-text" style="width: 12px; height: 12px;"></i> 3,820 words</span>
+              <span style="font-weight: 600; color: var(--primary);">View &rarr;</span>
+            </div>
+          </div>
+
+          <div class="chapter-card" onclick="window.openChapter('chap3')">
+            <div class="chapter-header">
+              <span class="chapter-pill">Chapter 3</span>
+              <span class="chapter-status-dot" title="Finalized"></span>
+            </div>
+            <div class="chapter-name">Research Methodology</div>
+            <p class="chapter-desc">Descriptive-developmental design, 30 ICT student sampling, and Likert scale treatment.</p>
+            <div class="chapter-meta">
+              <span class="chapter-meta-tag"><i data-lucide="file-text" style="width: 12px; height: 12px;"></i> 1,950 words</span>
+              <span style="font-weight: 600; color: var(--primary);">View &rarr;</span>
+            </div>
+          </div>
+
+          <div class="chapter-card" onclick="window.openChapter('chap4')">
+            <div class="chapter-header">
+              <span class="chapter-pill">Chapter 4</span>
+              <span class="chapter-status-dot" title="Finalized"></span>
+            </div>
+            <div class="chapter-name">Data Presentation & Analysis</div>
+            <p class="chapter-desc">Tabulated questionnaire results, usability indices, and statistical conclusions.</p>
+            <div class="chapter-meta">
+              <span class="chapter-meta-tag"><i data-lucide="file-text" style="width: 12px; height: 12px;"></i> 4,100 words</span>
+              <span style="font-weight: 600; color: var(--primary);">View &rarr;</span>
+            </div>
+          </div>
+
+          <div class="chapter-card" onclick="window.openChapter('chap5')">
+            <div class="chapter-header">
+              <span class="chapter-pill">Chapter 5</span>
+              <span class="chapter-status-dot" title="Finalized"></span>
+            </div>
+            <div class="chapter-name">Summary & Recommendations</div>
+            <p class="chapter-desc">Synthesis of findings, conclusions, and institutional adoption guidelines.</p>
+            <div class="chapter-meta">
+              <span class="chapter-meta-tag"><i data-lucide="file-text" style="width: 12px; height: 12px;"></i> 1,800 words</span>
+              <span style="font-weight: 600; color: var(--primary);">View &rarr;</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Two Column Panels: Activity Table & Interactive Tasks -->
+        <div class="panels-grid">
+          <!-- Recent Activity Log Panel -->
+          <div class="panel-card">
+            <div class="panel-header">
+              <div class="panel-title">Recent Activity Log</div>
+              <div class="filter-tabs">
+                <button class="filter-tab active" data-filter="all">All</button>
+                <button class="filter-tab" data-filter="completed">Completed</button>
+                <button class="filter-tab" data-filter="process">Process</button>
+                <button class="filter-tab" data-filter="pending">Pending</button>
+              </div>
             </div>
 
-           
-			<!-- Our teams starts here -->
-                <div class="table-data3">
-                    <div class="order3">
-                        <div class="head3">
-                            <h3>Members Information</h3>
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Researcher</th>
+                    <th>Activity Detail</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody id="activity-table-body">
+                  <tr data-status="completed">
+                    <td>
+                      <div class="user-cell">
+                        <img src="img/pic1.jpg" alt="Lady Liberty" class="user-avatar-sm" onerror="this.src='https://ui-avatars.com/api/?name=Lady+Liberty'">
+                        <div>
+                          <strong>Lady Liberty Caragay</strong>
+                          <div style="font-size: 0.7rem; color: var(--text-muted);">Lead Author</div>
                         </div>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Name</th>
-									<th>Social</th>
-                                    <th>Email</th>
-                                    <th>Contact Number</th>
-                                    <th>Status</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <img src="img/jenlyn.jpg">
-                                        <p>Jenlyn Leron</p>
-                                    </td>
-                                    <td>			
-										<a href="https://www.facebook.com/Jenlynpalomarleron?mibextid=ZbWKwL" class="fab fa-facebook-f"target="_blank"></a>
-										<a href="https://www.behance.net" class="fab fa-behance"target="_blank"></a>
-            							<a href="https://www.instagram.com" class="fab fa-instagram"target="_blank"></a>
-            							<a href="https://www.linkedin.com" class="fab fa-linkedin"target="_blank"></a>
-            							<a href="https://github.com/" class="fab fa-github"target="_blank"></a>
-									</td>
-                                    <td>jenlynleron18@gmail.com</td>
-									<td>09091235431</td>
-                                    <td><span class="status available">Available</span></td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <img src="img/pic1.jpg">
-                                        <p>Lady Caragay</p>
-                                    </td>
-                                    <td>			
-										<a href="https://www.facebook.com/liberty.caragay?mibextid=ZbWKwL" class="fab fa-facebook-f"target="_blank"></a>
-										<a href="https://www.behance.net" class="fab fa-behance"target="_blank"></a>
-            							<a href="https://www.instagram.com" class="fab fa-instagram"target="_blank"></a>
-            							<a href="https://www.linkedin.com" class="fab fa-linkedin"target="_blank"></a>
-            							<a href="https://github.com/" class="fab fa-github"target="_blank"></a>
-									</td>
-                                    <td>ladycaragay23@gmail.com</td>
-									<td>09933473754</td>
-                                    <td><span class="status busy">Busy</span></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
+                      </div>
+                    </td>
+                    <td>Statistical Treatment Compilation</td>
+                    <td>04-20-2023</td>
+                    <td><span class="badge-status completed"><i data-lucide="check" style="width: 10px; height: 10px;"></i> Completed</span></td>
+                  </tr>
+                  <tr data-status="completed">
+                    <td>
+                      <div class="user-cell">
+                        <img src="img/jenlyn.jpg" alt="Jenlyn Leron" class="user-avatar-sm" onerror="this.src='https://ui-avatars.com/api/?name=Jenlyn+Leron'">
+                        <div>
+                          <strong>Jenlyn Leron</strong>
+                          <div style="font-size: 0.7rem; color: var(--text-muted);">Co-Author</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Chapter 4 Data Gathering & Tally</td>
+                    <td>04-16-2023</td>
+                    <td><span class="badge-status completed"><i data-lucide="check" style="width: 10px; height: 10px;"></i> Completed</span></td>
+                  </tr>
+                  <tr data-status="process">
+                    <td>
+                      <div class="user-cell">
+                        <img src="img/pic1.jpg" alt="Lady Liberty" class="user-avatar-sm" onerror="this.src='https://ui-avatars.com/api/?name=Lady+Liberty'">
+                        <div>
+                          <strong>Lady Liberty Caragay</strong>
+                          <div style="font-size: 0.7rem; color: var(--text-muted);">Lead Author</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Final Proofreading & Binding Prep</td>
+                    <td>04-10-2023</td>
+                    <td><span class="badge-status process"><i data-lucide="loader-2" style="width: 10px; height: 10px;"></i> Process</span></td>
+                  </tr>
+                  <tr data-status="completed">
+                    <td>
+                      <div class="user-cell">
+                        <img src="img/jenlyn.jpg" alt="Jenlyn Leron" class="user-avatar-sm" onerror="this.src='https://ui-avatars.com/api/?name=Jenlyn+Leron'">
+                        <div>
+                          <strong>Jenlyn Leron</strong>
+                          <div style="font-size: 0.7rem; color: var(--text-muted);">Co-Author</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Questionnaire Deployment (30 Respondents)</td>
+                    <td>03-26-2023</td>
+                    <td><span class="badge-status completed"><i data-lucide="check" style="width: 10px; height: 10px;"></i> Completed</span></td>
+                  </tr>
+                  <tr data-status="pending">
+                    <td>
+                      <div class="user-cell">
+                        <img src="img/pic1.jpg" alt="Lady Liberty" class="user-avatar-sm" onerror="this.src='https://ui-avatars.com/api/?name=Lady+Liberty'">
+                        <div>
+                          <strong>Lady Liberty Caragay</strong>
+                          <div style="font-size: 0.7rem; color: var(--text-muted);">Lead Author</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Hardbound Copy Submission to Library</td>
+                    <td>05-02-2023</td>
+                    <td><span class="badge-status pending"><i data-lucide="clock" style="width: 10px; height: 10px;"></i> Pending</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Interactive Todos & Milestones Panel -->
+          <div class="panel-card">
+            <div class="panel-header">
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <span class="panel-title">Actionable Milestones</span>
+                <span id="todo-count-badge" class="badge-status process" style="font-size: 0.7rem;">0 open</span>
+              </div>
             </div>
 
-			<!-- Teams Section ends Here -->
-			
-		</main> 
-	</section>
+            <div class="todo-panel-body">
+              <div class="add-todo-form">
+                <input type="text" id="todo-new-input" placeholder="Add research task or milestone..." aria-label="New task">
+                <button id="todo-add-btn" class="btn btn-primary btn-sm">
+                  <i data-lucide="plus" style="width: 16px; height: 16px;"></i>
+                  Add
+                </button>
+              </div>
 
+              <div id="todo-list-items" class="todo-list-container">
+                <!-- Dynamically populated from LocalStorage / script.js -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-    
-            
+      <!-- ================================================================
+           VIEW: RESEARCH CHAPTERS / WORKS (Interactive Reader)
+           ================================================================ -->
+      <section id="view-works" class="view-section">
+        <div class="page-header">
+          <div class="header-title-group">
+            <h1>Research Chapters & Manuscript</h1>
+            <p class="header-subtitle">Official Thesis Documentation • Grade 11-12 ICT Senior High School</p>
+          </div>
+          <div class="header-actions">
+            <a href="data/Chapter-1.pdf" target="_blank" class="btn btn-secondary">
+              <i data-lucide="file-text" style="width: 16px; height: 16px;"></i> Chapter 1 PDF
+            </a>
+            <a href="researchfinal.pdf" target="_blank" class="btn btn-primary">
+              <i data-lucide="download" style="width: 16px; height: 16px;"></i> Full Research PDF
+            </a>
+          </div>
+        </div>
 
-    <script src="script.js"></script>
-    
+        <div class="chapter-reader-layout">
+          <!-- Chapters Navigation Outline -->
+          <div class="chapter-nav-card">
+            <span style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted);">
+              Manuscript Chapters
+            </span>
+            <div class="chapter-nav-list">
+              <button class="chapter-nav-btn active" data-chapter="chap1">
+                <i data-lucide="book" style="width: 16px; height: 16px;"></i>
+                Chapter 1: The Problem
+              </button>
+              <button class="chapter-nav-btn" data-chapter="chap2">
+                <i data-lucide="book" style="width: 16px; height: 16px;"></i>
+                Chapter 2: Literature Review
+              </button>
+              <button class="chapter-nav-btn" data-chapter="chap3">
+                <i data-lucide="book" style="width: 16px; height: 16px;"></i>
+                Chapter 3: Methodology
+              </button>
+              <button class="chapter-nav-btn" data-chapter="chap4">
+                <i data-lucide="book" style="width: 16px; height: 16px;"></i>
+                Chapter 4: Data Analysis
+              </button>
+              <button class="chapter-nav-btn" data-chapter="chap5">
+                <i data-lucide="book" style="width: 16px; height: 16px;"></i>
+                Chapter 5: Recommendations
+              </button>
+            </div>
+
+            <div style="margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--border-color); font-size: 0.75rem; color: var(--text-muted);">
+              <strong>Institution:</strong> AMA Computer College Santa Cruz, Laguna<br>
+              <strong>Academic Year:</strong> 2022-2023
+            </div>
+          </div>
+
+          <!-- Chapter Content Display -->
+          <div id="chapter-content-display" class="chapter-content-card">
+            <!-- Dynamically populated by script.js -->
+          </div>
+        </div>
+      </section>
+
+      <!-- ================================================================
+           VIEW: ASSIGNED TASKS & TIMELINE
+           ================================================================ -->
+      <section id="view-task" class="view-section">
+        <div class="page-header">
+          <div class="header-title-group">
+            <h1>Research Milestones & Deliverables</h1>
+            <p class="header-subtitle">Key Phases from Proposal Defense to Institutional Archiving</p>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+          <!-- Phase 1 -->
+          <div class="panel-card" style="padding: 20px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+              <span class="badge-status completed">Phase 1</span>
+              <span style="font-size: 0.75rem; color: var(--text-muted);">Dec 2022</span>
+            </div>
+            <h3 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 6px;">Title Defense & Conceptualization</h3>
+            <p style="font-size: 0.8125rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 16px;">
+              Formulation of the research title, conceptual framework, and preliminary adviser clearance.
+            </p>
+            <div style="font-size: 0.75rem; color: var(--success); font-weight: 600; display: flex; align-items: center; gap: 4px;">
+              <i data-lucide="check-circle" style="width: 14px; height: 14px;"></i> Approved by Panel
+            </div>
+          </div>
+
+          <!-- Phase 2 -->
+          <div class="panel-card" style="padding: 20px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+              <span class="badge-status completed">Phase 2</span>
+              <span style="font-size: 0.75rem; color: var(--text-muted);">Feb 2023</span>
+            </div>
+            <h3 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 6px;">Chapters 1-3 Proposal Defense</h3>
+            <p style="font-size: 0.8125rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 16px;">
+              Methodology review, Likert scale questionnaire validation, and sample size approval (30 respondents).
+            </p>
+            <div style="font-size: 0.75rem; color: var(--success); font-weight: 600; display: flex; align-items: center; gap: 4px;">
+              <i data-lucide="check-circle" style="width: 14px; height: 14px;"></i> Completed
+            </div>
+          </div>
+
+          <!-- Phase 3 -->
+          <div class="panel-card" style="padding: 20px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+              <span class="badge-status completed">Phase 3</span>
+              <span style="font-size: 0.75rem; color: var(--text-muted);">Mar-Apr 2023</span>
+            </div>
+            <h3 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 6px;">Data Gathering & Statistical Analysis</h3>
+            <p style="font-size: 0.8125rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 16px;">
+              Distribution of questionnaires to Grade 11 & 12 ICT cohorts; tallying mean, percentage, and standard deviation.
+            </p>
+            <div style="font-size: 0.75rem; color: var(--success); font-weight: 600; display: flex; align-items: center; gap: 4px;">
+              <i data-lucide="check-circle" style="width: 14px; height: 14px;"></i> Completed (Composite Mean: 4.75)
+            </div>
+          </div>
+
+          <!-- Phase 4 -->
+          <div class="panel-card" style="padding: 20px; border-left: 4px solid var(--primary);">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+              <span class="badge-status process">Phase 4</span>
+              <span style="font-size: 0.75rem; color: var(--text-muted);">Current</span>
+            </div>
+            <h3 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 6px;">Final Oral Defense & Binding</h3>
+            <p style="font-size: 0.8125rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 16px;">
+              Presentation of findings, recommendations for AMA Santa Cruz, and preparation of final hardbound manuscripts.
+            </p>
+            <div style="font-size: 0.75rem; color: var(--primary); font-weight: 600; display: flex; align-items: center; gap: 4px;">
+              <i data-lucide="clock" style="width: 14px; height: 14px;"></i> In Progress / Finalized
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================================================================
+           VIEW: RESEARCH TEAM
+           ================================================================ -->
+      <section id="view-teams" class="view-section">
+        <div class="page-header">
+          <div class="header-title-group">
+            <h1>Research Team & Contributors</h1>
+            <p class="header-subtitle">Senior High School ICT Research Group • AMA Santa Cruz Campus</p>
+          </div>
+        </div>
+
+        <div class="team-grid">
+          <div class="team-card">
+            <img src="img/pic1.jpg" alt="Lady Liberty Caragay" class="team-avatar-lg" onerror="this.src='https://ui-avatars.com/api/?name=Lady+Liberty&background=2563eb&color=fff'">
+            <div class="team-member-name">Lady Liberty Caragay</div>
+            <div class="team-member-role">Lead Researcher & Developer</div>
+            <p class="team-member-bio">
+              System architecture, questionnaire construction, statistical computation, and manuscript compilation for Chapters 1-5.
+            </p>
+          </div>
+
+          <div class="team-card">
+            <img src="img/jenlyn.jpg" alt="Jenlyn Leron" class="team-avatar-lg" onerror="this.src='https://ui-avatars.com/api/?name=Jenlyn+Leron&background=16a34a&color=fff'">
+            <div class="team-member-name">Jenlyn Leron</div>
+            <div class="team-member-role">Co-Researcher & Field Coordinator</div>
+            <p class="team-member-bio">
+              Survey distribution administration among Grade 11 & 12 ICT respondents, literature compilation, and data encoding.
+            </p>
+          </div>
+
+          <div class="team-card">
+            <div class="team-avatar-lg" style="display: flex; align-items: center; justify-content: center; background: var(--bg-subtle); color: var(--text-secondary);">
+              <i data-lucide="graduation-cap" style="width: 32px; height: 32px;"></i>
+            </div>
+            <div class="team-member-name">Research Adviser & Faculty</div>
+            <div class="team-member-role" style="background-color: var(--warning-light); color: var(--warning);">Academic Adviser</div>
+            <p class="team-member-bio">
+              Practical Research faculty oversight, methodology guidance, and institutional defense coordination at AMA Santa Cruz.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================================================================
+           VIEW: ACTIVITY NOTES & MESSAGES
+           ================================================================ -->
+      <section id="view-message" class="view-section">
+        <div class="page-header">
+          <div class="header-title-group">
+            <h1>Activity Notes & Advising Log</h1>
+            <p class="header-subtitle">Documented Advising Feedback and Team Consultation Records</p>
+          </div>
+        </div>
+
+        <div class="panel-card" style="padding: 24px;">
+          <div style="display: flex; flex-direction: column; gap: 16px;">
+            <div style="padding: 16px; border-radius: var(--radius-md); background-color: var(--bg-subtle); border-left: 4px solid var(--primary);">
+              <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+                <strong style="font-size: 0.9rem;">Panel Consultation Note</strong>
+                <span style="font-size: 0.75rem; color: var(--text-muted);">April 18, 2023</span>
+              </div>
+              <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; margin: 0;">
+                "Ensure that Chapter 4 highlights the correlation between student ease-of-use and the 83.3% satisfaction index. The Likert scale analysis proves strong operational feasibility."
+              </p>
+            </div>
+
+            <div style="padding: 16px; border-radius: var(--radius-md); background-color: var(--bg-subtle); border-left: 4px solid var(--success);">
+              <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+                <strong style="font-size: 0.9rem;">Field Survey Deployment Clearance</strong>
+                <span style="font-size: 0.75rem; color: var(--text-muted);">March 25, 2023</span>
+              </div>
+              <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; margin: 0;">
+                "Permission granted to survey 30 Grade 11 and Grade 12 ICT students during their free study periods without class interruption."
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Custom Scripts -->
+  <script src="script.js"></script>
 </body>
 </html>
